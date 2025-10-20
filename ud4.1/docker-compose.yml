@@ -1,0 +1,7 @@
+services:
+  web:
+    image: php:7.4-apache
+    ports:
+    - "81:80"
+    volumes:
+    - ./config/apache2.conf:/etc/apache2/apache2.conf
