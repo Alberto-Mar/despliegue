@@ -1,0 +1,13 @@
+services:
+ apache:
+  image: httpd:2.4
+  container_name: apache_multi
+  ports:
+  - "8081:81"
+  - "8082:82"
+  volumes:
+  - ./sites/proyecto1.conf:/usr/local/apache2/conf/extra/proyecto1.conf
+  - ./sites/proyecto2.conf:/usr/local/apache2/conf/extra/proyecto2.conf
+  - ./html:/usr/local/apache2/htdocs
+  - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
+    

@@ -1,0 +1,9 @@
+services:
+  apache:
+    image: httpd:2.4
+    container_name: apache_virtual
+    ports:
+     - "8080:80"
+    volumes:
+     - ./000-default.conf:/usr/local/apache2/conf/httpd.conf
+     - ./index.html:/usr/local/apache2/htdocs/index.h

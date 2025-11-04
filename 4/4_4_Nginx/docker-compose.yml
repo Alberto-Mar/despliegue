@@ -1,0 +1,9 @@
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: nginx_virtual
+    ports:
+     - "8081:80"
+    volumes:
+     - ./default.conf:/etc/nginx/conf.d/default.conf
+     - ./index.html:/usr/share/nginx/html/index.html

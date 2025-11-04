@@ -1,0 +1,4 @@
+<?php
+echo "<h1>¡Hola desde Nginx con reescritura!</h1>";
+echo "<p>Has accedido a: " . $_SERVER['REQUEST_URI'] . "</p>";
+?>

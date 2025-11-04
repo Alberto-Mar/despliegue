@@ -1,0 +1,8 @@
+services:
+  apache:
+    build: .
+    ports:
+     - "443:443"
+    volumes:
+     - ./html:/usr/local/apache2/htdocs
+    container_name: apache-s

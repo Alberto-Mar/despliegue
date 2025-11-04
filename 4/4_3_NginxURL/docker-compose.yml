@@ -1,0 +1,16 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx_server
+    ports:
+    - "8082:80"
+    volumes:
+    - ./php:/var/www/html
+    - ./default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+    - php-fpm
+  php-fpm:
+    image: php:8.2-fpm
+    container_name: php_fpm
+    volumes:
+    - ./php:/var/www/html

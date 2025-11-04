@@ -1,0 +1,10 @@
+services:
+  apache:
+    build: .
+    container_name: "apache-status"
+    ports:
+      - "8081:80"
+    volumes:
+      - ./conf/httpd.conf:/usr/local/apache2/conf/httpd.conf:ro
+    restart: unless-stopped
+
