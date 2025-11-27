@@ -1,0 +1,33 @@
+
+services:
+ nginx:
+  image: nginx:alpine
+  container_name: nginx
+  ports:
+  - "8081:80"
+  volumes:
+  - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+  - ./nginx/html:/usr/share/nginx/html:ro
+  - ./logs:/var/log/nginx
+  restart: unless-stopped
+ goaccess:
+  image: allinurl/goaccess
+  container_name: goaccess
+  depends_on:
+  - nginx
+  ports:
+  - "7890:7890"
+  volumes:
+  - ./logs:/var/log/nginx
+  - ./goaccess/goaccess.conf:/srv/config/goaccess.conf
+  - ./nginx/html:/usr/share/nginx/html
+  command:
+  - /var/log/nginx/access.log
+  - --no-global-config
+  - --config-file=/srv/config/goaccess.conf
+  - -o
+  - /usr/share/nginx/html/report.html
+  - --real-time-html
+  - --port=7890
+  - --addr=0.0.0.0
+  restart: unless-stopped

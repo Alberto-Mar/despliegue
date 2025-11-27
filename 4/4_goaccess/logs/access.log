@@ -1,0 +1,8 @@
+172.21.0.1 - - [10/Nov/2025:14:55:42 +0000] "GET / HTTP/1.1" 200 277"-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+172.21.0.1 - - [10/Nov/2025:14:55:42 +0000] "GET /favicon.ico HTTP/1.1" 404 555"http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+172.21.0.1 - - [10/Nov/2025:14:56:39 +0000] "GET / HTTP/1.1" 304 0"-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+172.21.0.1 - - [10/Nov/2025:14:56:44 +0000] "GET /report.html HTTP/1.1" 200 726567"-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+172.18.0.1 - - [18/Nov/2025:17:58:58 +0000] "GET / HTTP/1.1" 200 277"-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+172.18.0.1 - - [18/Nov/2025:17:58:58 +0000] "GET /favicon.ico HTTP/1.1" 404 555"http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+172.18.0.1 - - [18/Nov/2025:17:59:01 +0000] "GET /report.html HTTP/1.1" 200 727104"http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+d

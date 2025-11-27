@@ -1,0 +1,30 @@
+services:
+  nginx:
+    ports:
+      - "443:443"
+    volumes:
+      - ./html/prod:/usr/share/nginx/html
+      - ./nginx/prod:/etc/nginx/conf.d
+      - ./nginx/certs:/etc/nginx/certs
+      - ./logs:/var/log/nginx
+    restart: unless-stopped
+  goaccess:
+    image: allinurl/goaccess
+    container_name: goaccess
+    depends_on:
+      - nginx
+    ports:
+      - "7890:7890"
+    volumes:
+      - ./logs:/var/log/nginx
+      - ./goaccess/goaccess.conf:/srv/config/goaccess.conf
+    command:
+      - /var/log/nginx/access.log
+      - --no-global-config
+      - --config-file=/srv/config/goaccess.conf
+      - -o
+      - /usr/share/nginx/html/report.html
+      - --real-time-html
+      - --port=7890
+      - --addr=0.0.0.0
+    restart: unless-stopped
